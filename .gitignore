@@ -1,0 +1,4 @@
+.pytest_cache*
+vcf_to_data/__pycache*
+VcfToData.egg-info*
+tests/__pycache*
