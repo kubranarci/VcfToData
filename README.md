@@ -7,8 +7,6 @@ VcfToData is a Python tool for converting VCF files into table format (TSV or CS
 To install VcfToData, clone the repository and install the required dependencies:
 
 
-
-
 ```bash
 git clone https://github.com/kubranarci/VcfToData.git 
 cd VcfToData 
@@ -17,14 +15,16 @@ pip install -e .
 ```
 
 ## Usage
-VcfToData <vcf_file> <gene_list> <gnomad_af> <output> --info-fields RankScore --format-fields GT DB
+vcf-to-data --vcf <vcf_file> --out <output> --gene-list <gene_list> --gnomad-af <gnomad_af> --info-fields RankScore --format-fields GT DB
 
 
 ## Options
 
-vcf_file: The input VCF file.
+--vcf: The input VCF file.
 
-output_file: The output CSV file.
+--out: Output prefix.
+
+--output-format: The format of the output file - csv, tab or json
 
 --gene-list: Optional file with a list of genes to annotate.
 

@@ -7,11 +7,11 @@ def main():
     parser = ArgumentParser(description='VCF to Table converter')
     
     # Required arguments
-    parser.add_argument('--vcf-file', required=True, help='VCF file path')
-    parser.add_argument('--output', required=True, help='Output file path')
+    parser.add_argument('--vcf', required=True, help='VCF file path')
+    parser.add_argument('--out', required=True, help='Output file path')
     
     # Optional arguments
-    parser.add_argument('--gene-list-file', help='Gene list file path (optional)')
+    parser.add_argument('--gene-list', help='Gene list file path (optional)')
     parser.add_argument('--gnomad-af', help='GNOMAD_AF file path (optional, tab or tab.gz)')
     
     # Output format
@@ -25,10 +25,10 @@ def main():
 
     # Call process_vcf function to process the VCF and generate output
     process_vcf(
-        vcf_file=args.vcf_file,
-        gene_list_file=args.gene_list_file,
+        vcf_file=args.vcf,
+        gene_list_file=args.gene_list,
         gnomad_af_file=args.gnomad_af,
-        output_file=args.output,
+        output_file=args.out,
         info_fields=args.info_fields,
         format_fields=args.format_fields,
         output_format=args.output_format
